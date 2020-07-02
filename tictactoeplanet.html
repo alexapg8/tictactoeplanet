@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tic-Tac-Toe-Planet!</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script type="text/javascript" src="tictactoegame.js"></script>
+	</head>
+	<body>
+	<header>
+	<h1> Tic-Tac-Toe-Planet! </h1>
+	<p> who will you conquer the universe? </p>
+	</header>
+
+	<div id="playersGame">
+	<div class="players-contain">
+		<div class="players" v-for="player in players">
+			<user :player="player">
+				<h2>{{ player.name }}</h2>	
+			</user>
+		</div>
+	</div>
+	</div>
+	
+	<h2>Let's play!</h2>
+	
+	<div id="game">
+		<div class="game-contain">
+			<div class="squares" v-for="square in squares">
+				<item :square="square">
+				</item>
+		</div>
+	</div>
+	
+	<button id="resetBtn" onClick="window.location.reload();">RESET</button>
+
+	</body>
+</html>
