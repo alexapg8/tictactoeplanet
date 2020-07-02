@@ -1,5 +1,9 @@
 window.onload = function (){
 	// we create a component to set the board table squares based on our template
+	/* based on : Sarah Drasner, https://codepen.io/sdras/pen/owaWwd , accessed June 30th 2020
+	the idea to hold only the square as a prop and use the template to insert the information I want inside was based on it, all the methods an binding of classes, and functions where made by me.
+	I came up with the idea to have both players perform different click actions so that the planet shown would be the intended one. 
+	The clicks have two functions inside them each so that when they are clicked we show the planet but also run the whoWon function.	*/
 	Vue.component("item", {
 		props: ['square'],
 		template: `<div class="item">
@@ -123,6 +127,10 @@ window.onload = function (){
 	});
 	
 	// we create a component to set the users player info based on our template
+	/* based on : Sarah Drasner, https://codepen.io/sdras/pen/owaWwd , accessed June 30th 2020
+	the idea to hold only the player as a prop and use the template to insert the information I want inside was based on it, all the methods an binding of classes, and functions where made by me.
+	how to use the input invue js was based on the official page: https://vuejs.org/v2/guide/forms.html , but I wanted to hide the input once the user was done 
+	inserting their name, so I added a button which calls the function to hide the input field and the button leaving only the name which shows in the <slot>*/
 	Vue.component("user", {
 		props: ['player'],
 		template: `<div class="user">

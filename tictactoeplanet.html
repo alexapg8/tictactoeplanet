@@ -12,8 +12,12 @@
 	<h1> Tic-Tac-Toe-Planet! </h1>
 	<p> who will you conquer the universe? </p>
 	</header>
-
+	<!-- all the design and main idea was developed by me -->
 	<div id="playersGame">
+	<!-- based on : Sarah Drasner, https://codepen.io/sdras/pen/owaWwd , accessed June 30th 2020
+	based the  format for the HTML, creating a container holding the players cards where we use
+	a for loop to go through all the data inside the user component. The user component will hold the information
+	and template for the player -->
 	<div class="players-contain">
 		<div class="players" v-for="player in players">
 			<user :player="player">
@@ -24,8 +28,9 @@
 	</div>
 	
 	<h2>Let's play!</h2>
-	
 	<div id="game">
+	<!-- based on : Sarah Drasner, https://codepen.io/sdras/pen/owaWwd , accessed June 30th 2020
+	creating the HTML code to show the squares inside the item component using a for loop to loop through them -->
 		<div class="game-contain">
 			<div class="squares" v-for="square in squares">
 				<item :square="square">
@@ -33,6 +38,7 @@
 		</div>
 	</div>
 	
+	<!-- we use a button to reset the game which refreshes the page once clicked -->
 	<button id="resetBtn" onClick="window.location.reload();">RESET</button>
 
 	</body>
